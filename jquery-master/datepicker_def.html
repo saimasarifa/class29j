@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Datepicker - Format date</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+</head>
+<body>
+
+<p>Date: <input type="text" id="maxdate" size="30"></p>
+<p>Date: <input type="text" id="mindate" size="30"></p>
+<p>Date: <input type="text" id="check" size="30"></p>
+<p>Date: <input type="text" id="check1" size="30"></p>
+
+
+
+
+
+
+<script>
+
+
+    $( "#maxdate" ).datepicker({
+        maxDate: "+1m +1w",
+        minDate: "-1m"
+
+    });
+    $( "#mindate" ).datepicker({
+        minDate: new Date(2014, 1 - 1, 1),
+        maxDate: "+1m +1w"
+
+    });
+
+    $( "#check" ).datepicker({
+        navigationAsDateFormat: true
+
+
+    });
+    $( "#check1" ).datepicker({
+        calculateWeek: myWeekCalc
+
+            });
+
+</script>
+
+</body>
+</html>
